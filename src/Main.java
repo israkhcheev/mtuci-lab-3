@@ -1,10 +1,16 @@
+import util.*;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        String s1 = "12";
-        String s2 = "21";
+        List<StringUtil> utilList = List.of(
+                new Anagram(), new Concat(), new EndsWith(), new EqualsBuffer(), new FirstOriginal(),
+                new IntegerSum(), new Lexicographic(), new NonDuplicator(), new Palindrome(), new Register(),
+                new SimpleEquals(), new SimpleLength(), new StartWithStop(), new ThreeChar()
+        );
 
-        System.out.println(s1 = s2);
+        utilList.forEach(util -> System.out.println(util.action()));
     }
 }
